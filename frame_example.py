@@ -22,7 +22,7 @@ entry.pack()
 
 # Outside the Frame
 label2 = ttk.Label(window, text="Label outside frame")
-label2.pack(side='right')
+label2.pack(side='left')
 
 
 window.mainloop()
