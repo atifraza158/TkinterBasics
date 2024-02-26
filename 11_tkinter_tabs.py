@@ -36,9 +36,11 @@ entry4.pack()
 tab3 = ttk.Frame(notebook)
 button1 = ttk.Button(tab3, text="Button 1")
 button2 = ttk.Button(tab3, text="Button 2")
+label5 = ttk.Label(tab3, text="Label inside Other tab")
 
 button1.pack()
 button2.pack()
+label5.pack()
 
 notebook.add(tab1, text="All Labels")
 notebook.add(tab2, text="All Entries")
