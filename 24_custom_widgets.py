@@ -18,7 +18,7 @@ def create_segment(parent, label_text, button_text):
     
 # Class base Custom Widget
 class Segment(ttk.Frame):
-    def __init__(self, parent, label_text, button_text):
+    def __init__(self, parent, label_text, button_text, button2_text):
         super().__init__(master = parent)
         
         self.rowconfigure(0, weight=1)
@@ -30,7 +30,7 @@ class Segment(ttk.Frame):
         label.grid(row=0, column=0, sticky='nsew')
         button.grid(row=0, column=1, sticky='nsew')
         
-        self.create_sub_segment("Hello Button").grid(row=0, column=2, sticky='nsew')
+        self.create_sub_segment(button2_text).grid(row=0, column=2, sticky='nsew')
 
         self.pack(expand=True, fill='both', padx=10, pady=5)
         
@@ -51,12 +51,12 @@ window.geometry("400x600")
 
 
 # Widgets
-Segment(window, "Label 1", "Button 1")
-Segment(window, "Label 2", "Button 2")
-Segment(window, "Label 3", "Button 3")
-Segment(window, "Label 4", "Button 4")
-Segment(window, "Label 5", "Button 5")
-Segment(window, "Label 6", "Button 6")
+Segment(window, "Label 1", "Button 1", "Exercise Button")
+Segment(window, "Label 2", "Button 2", "Exercise Button")
+Segment(window, "Label 3", "Button 3", "Exercise Button")
+Segment(window, "Label 4", "Button 4", "Exercise Button")
+Segment(window, "Label 5", "Button 5", "Exercise Button")
+Segment(window, "Label 6", "Button 6", "Exercise Button")
 
 # create_segment(window, "label 1", "Button 1").pack(expand=True, fill='both', padx=10, pady=5)
 # create_segment(window, "Label 2", "Button 2").pack(expand=True, fill='both', padx=10, pady=5)
