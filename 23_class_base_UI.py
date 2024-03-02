@@ -8,7 +8,7 @@ class Window(Tk):
         self.geometry(f"{size[0]}x{size[1]}")
         self.minsize(size[0], size[1])
         
-        # Widgets
+        # Widgets   
         self.menu = MenuFrame(self)
         self.menu = MainFrame(self)
         
@@ -59,31 +59,23 @@ class MainFrame(ttk.Frame):
         super().__init__(parent)
         # Label(self, background="red").pack(expand=True, fill='both')
         self.place(relx=0.3, y = 0, relwidth=0.7, relheight=1)
-        self.create_widgets()
-    
-    # Create Widgets
-    def create_widgets(self):
-        main_frame1 = ttk.Frame(self)
-        main_frame2 = ttk.Frame(self)
+        # self.create_widgets()
+        Entry(self, 'skyblue', "Button 1")
+        Entry(self, 'lightgreen', "Button 2")
+        Entry(self, 'crimson', "Button 3")
         
-        
+class Entry(ttk.Frame):
+    def __init__(self, parent, color, text):
+        super().__init__(parent)       
         
         # Widgets
-        label1 = ttk.Label(main_frame1, background='skyblue')
-        button1 = ttk.Button(main_frame1, text="Button 1", )
-        
-        label2 = ttk.Label(main_frame2, background='lightgreen')
-        button2 = ttk.Button(main_frame2, text="Button 2", )
-        
-        
+        label1 = ttk.Label(self, background=color)
+        button1 = ttk.Button(self, text=text)
+            
         label1.pack(fill='both', expand=True)
         button1.pack(fill='both', expand=True, pady=10)
-        
-        label2.pack(fill='both', expand=True)
-        button2.pack(fill='both', expand=True, pady=10)
-        
-        main_frame1.pack(side='left', expand=True, fill='both', padx=20, pady=20)
-        main_frame2.pack(side='left', expand=True, fill='both', padx=20, pady=20)
-        
+
+        self.pack(side='left', expand=True, fill='both', padx=20, pady=20)
+
 
 Window("Class Base View", (900, 600))
