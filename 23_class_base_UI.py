@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import ttk
 
 class Window(Tk):
-    def __init__(self, title, size):
+    def __init__(self, title, size): 
         super().__init__()
         self.title(title)
         self.geometry(f"{size[0]}x{size[1]}")
